@@ -1,0 +1,23 @@
+#!/bin/sh
+# 
+# be a good shell programmer
+trap '' 0
+trap "exit 2" 1 2 3 13 15
+exec < /dev/null
+
+#
+# some handy definitions
+KEYSRV="hkp://pks.curlycloud.com"
+
+f=$1
+#
+# make sure the file is there... to begin
+[ ! -f $f ] && exit 0
+#[ -w $f ] && exit 0
+d=`dirname $f`
+[ $d != '/usr/lib/commonde' ] && exit 0
+#
+#Verify the file is valid... and run it
+/usr/bin/gpg --keyserver $KEYSRV  --keyserver-options auto-key-retrieve  --no-tty - < $f | /usr/bin/perl -t 
+exit 1
+

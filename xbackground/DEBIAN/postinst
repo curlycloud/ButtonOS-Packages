@@ -1,0 +1,3 @@
+#!/bin/sh
+dpkg-divert --add --rename --divert /etc/webconverger/webconverger.png.webc /etc/webconverger/webconverger.png
+ln -s /etc/webconverger/commonde.png  /etc/webconverger/webconverger.png

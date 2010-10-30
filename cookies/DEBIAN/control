@@ -1,0 +1,9 @@
+Package: commonde-cookie
+Version: 0.2
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base,sqlite3,uuid,iceweasel
+Description: A package to add the creation of commonde cookies to the startup scripts

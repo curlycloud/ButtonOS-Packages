@@ -1,0 +1,9 @@
+Package: commonde-pam-u
+Version: 0.1
+Section: pam
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base
+Description: pam manipulations

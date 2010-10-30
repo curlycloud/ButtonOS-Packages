@@ -1,0 +1,3 @@
+#!/bin/sh
+dpkg-divert --add --rename --divert /etc/iceweasel/profile/mimeTypes.rdf.webc /etc/iceweasel/profile/mimeTypes.rdf
+ln -s  /etc/iceweasel/profile/mimeTypes.rdf.cde /etc/iceweasel/profile/mimeTypes.rdf

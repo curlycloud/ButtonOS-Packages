@@ -1,0 +1,9 @@
+Package: commonde-shell
+Version: 0.4
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base
+Description: An application to allow signed scripts to be run form the web.

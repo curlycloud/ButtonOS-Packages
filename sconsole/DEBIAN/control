@@ -1,0 +1,9 @@
+Package: commonde-sconsole
+Version: 0.3
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base
+Description: The splash on the console. Its the image you see when the machine first boots.

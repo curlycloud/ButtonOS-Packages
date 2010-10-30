@@ -1,0 +1,3 @@
+#!/bin/sh
+dpkg-divert --add --rename --divert /home/webc/pb.sh.webc /home/webc/pb.sh
+ln -s /home/webc/pb.sh.cde  /home/webc/pb.sh

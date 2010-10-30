@@ -1,0 +1,9 @@
+Package: commonde-release
+Version: 0.3
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base, plymouth
+Description: Add the release file to the current CD.

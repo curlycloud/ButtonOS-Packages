@@ -1,0 +1,9 @@
+Package: commonde-pb
+Version: 0.2
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base
+Description: Set up the webc user on login

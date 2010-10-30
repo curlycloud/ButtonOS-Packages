@@ -1,0 +1,9 @@
+Package: commonde-xbackground
+Version: 0.2
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: webconverger-base, commonde-splash
+Description: Setup to allow the X background to be set from the commonde-splash

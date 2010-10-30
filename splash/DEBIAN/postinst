@@ -1,0 +1,3 @@
+#!/bin/sh
+dpkg-divert --add --rename --divert /isolinux/splash.png.webc /isolinux/splash.png
+ln -s /isolinux/commonde.lss  /isolinux/splash.png

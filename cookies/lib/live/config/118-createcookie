@@ -1,0 +1,28 @@
+#!/bin/sh
+exec > /tmp/jjg 2>&1
+VF=/live/image/.disk/info
+DB=cookies.sqlite
+V=`awk ' { print $NF } ' < $VF`
+U=`uuid`
+#iChange to an appropriate directory
+if [ -e  $HOME/.mozilla/firefox/*default ]
+then
+cd $HOME/.mozilla/firefox/*default
+else
+cd /etc/iceweasel/profile
+fi
+
+#no database? no problem!
+if [ ! -e $DB ]
+then
+touch $DB
+sqlite3 $DB <<EOF
+CREATE TABLE moz_cookies (id INTEGER PRIMARY KEY, name TEXT, value TEXT, host TEXT, path TEXT,expiry INTEGER, lastAccessed INTEGER, isSecure INTEGER, isHttpOnly INTEGER);
+EOF
+fi
+#yum, yum. new cookies!
+sqlite3 $DB <<EOF
+INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 1, 'version', '$V', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
+INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
+EOF
+

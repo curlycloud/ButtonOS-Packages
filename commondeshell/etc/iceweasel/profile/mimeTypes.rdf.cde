@@ -1,0 +1,52 @@
+<?xml version="1.0"?>  
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:NC="http://home.netscape.com/NC-rdf#"
+     xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <Description about="urn:mimetypes"> 
+    <NC:MIME-types> 
+      <Seq about="urn:mimetypes:root"> 
+      </Seq> 
+    </NC:MIME-types> 
+  </Description> 
+  <RDF:Description RDF:about="urn:mimetype:application/commonde"
+                   NC:value="application/commonde"
+                   NC:editable="true"
+                   NC:fileExtensions="cdsh"
+                   NC:description="">
+    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commonde"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:mimetype:application/commondep"
+                   NC:value="application/commondep"
+                   NC:editable="false"
+                   NC:fileExtensions="cdph"
+                   NC:description="">
+    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commondep"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commonde"
+                   NC:prettyName="cdsh"
+                   NC:path="/usr/bin/cdsh" />
+  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commondep"
+                   NC:prettyName="cdpl"
+                   NC:path="/usr/bin/cdpl" />
+  <RDF:Description RDF:about="urn:mimetype:handler:application/x-sdlc"
+                   NC:alwaysAsk="true"
+                   NC:useSystemDefault="true"
+                   NC:saveToDisk="false">
+    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/x-sdlc"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:mimetype:handler:application/commonde"
+                   NC:alwaysAsk="false">
+    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commonde"/>
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/bin/cdsh"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:mimetype:handler:application/commondep"
+                   NC:alwaysAsk="false">
+    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commondep"/>
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/bin/cdpl"/>
+  </RDF:Description>
+    <RDF:li RDF:resource="urn:mimetype:application/commonde"/>
+    <RDF:li RDF:resource="urn:mimetype:application/commondep"/>
+
+</RDF>
