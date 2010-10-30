@@ -5,8 +5,8 @@ groupadd commondep
 chown root:commondep /usr/lib/commonde/*
 chmod 440 /usr/lib/commonde/*
 #
-chown root:commondep /usr/lib/commonde/runcommonde
 chmod 4550 /usr/lib/commonde/runcommonde
+chmod 550 /usr/lib/commonde/cdpl
 #
 usermod -a -G commondep webc
 
