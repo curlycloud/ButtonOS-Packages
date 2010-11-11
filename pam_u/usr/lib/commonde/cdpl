@@ -13,7 +13,6 @@ f=$1
 #
 # make sure the file is there... to begin
 [ ! -f $f ] && exit 0
-#[ -w $f ] && exit 0
 d=`dirname $f`
 [ $d != '/usr/lib/commonde' ] && exit 0
 #
