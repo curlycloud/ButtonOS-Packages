@@ -22,7 +22,10 @@ xset b 0 0
 xsetroot -solid "#444444"
 
 # only when noroot is supplied, we use Webc's WM dwm.web
-grep -qs noroot /proc/cmdline && /usr/bin/dwm.web || /usr/bin/dwm.default &
+wm=/usr/bin/dwm.web
+grep -qs noroot /proc/cmdline && wm=/usr/bin/dwm.default
+[ -x /usr/bin/lxsession ] && wm=/usr/bin/lxsession
+$wm &
 
 # hide the cursor by default, showcursor to override
 grep -qs showcursor /proc/cmdline || /usr/bin/unclutter &
