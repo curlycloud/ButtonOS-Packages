@@ -18,13 +18,13 @@ cp /etc/webconverger/webconverger.png $WEBCHOME/bg.png
 # disable bell
 xset b 0 0
 
-# white background
+# set background
 xsetroot -solid "#444444"
 
 # only when noroot is supplied, we use Webc's WM dwm.web
 wm=/usr/bin/dwm.web
 grep -qs noroot /proc/cmdline && wm=/usr/bin/dwm.default
-[ -x /usr/bin/lxsession ] && wm=/usr/bin/lxsession
+[ -x /usr/bin/lxsession ] && wm=echo\ /usr/bin/lxsession
 $wm &
 
 # hide the cursor by default, showcursor to override
@@ -45,7 +45,7 @@ grep -qs compose /proc/cmdline && setxkbmap -option "compose:rwin" && logger "Co
 
 # if no-x-background is unset, try setup a background from homepage ($1)
 grep -qs noxbg /proc/cmdline || {
-xloadimage -quiet -onroot -center $WEBCHOME/bg.png
+xloadimage -quiet -onroot -center $WEBCHOME/bg.png -border "#444444"
 }
 
 # No screen blanking (warning: might limit the life span of your screen & world)
