@@ -24,7 +24,7 @@ xsetroot -solid "#444444"
 # only when noroot is supplied, we use Webc's WM dwm.web
 wm=/usr/bin/dwm.web
 grep -qs noroot /proc/cmdline && wm=/usr/bin/dwm.default
-[ -x /usr/bin/lxsession ] && wm=echo\ /usr/bin/lxsession
+[ -x /usr/bin/lxsession ] && wm=/usr/bin/lxsession
 $wm &
 
 # hide the cursor by default, showcursor to override
