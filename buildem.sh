@@ -1,7 +1,7 @@
 #!/bin/sh
 rm -f commonde-*.deb
-rm -f deflxcfg-*.deb
-rm -f cde-lxconfig.deb
+rm -f deflxcfg*.deb
+rm -f cde-lxconfig*.deb
 for x in *
 do
  [ -d $x ] && fakeroot dpkg-deb --build $x
