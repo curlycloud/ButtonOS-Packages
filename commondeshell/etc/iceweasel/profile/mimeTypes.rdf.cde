@@ -20,7 +20,7 @@
   <RDF:Description RDF:about="urn:mimetype:application/commondep"
                    NC:value="application/commondep"
                    NC:editable="false"
-                   NC:fileExtensions="cdph"
+                   NC:fileExtensions="cdpl"
                    NC:description="">
     <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commondep"/>
   </RDF:Description>
