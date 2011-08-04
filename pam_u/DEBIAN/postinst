@@ -1,6 +1,7 @@
 #!/bin/sh
 #create a new group that can run these commands
 groupadd commondep
+groupadd netdev
 #
 chown root:commondep /usr/lib/commonde/*
 chmod 440 /usr/lib/commonde/*
@@ -9,4 +10,6 @@ chmod 4550 /usr/lib/commonde/runcommonde
 chmod 550 /usr/lib/commonde/cdpl
 #
 usermod -a -G commondep webc
+usermod -a -G sudo webc
+usermod -a -G netdev webc
 

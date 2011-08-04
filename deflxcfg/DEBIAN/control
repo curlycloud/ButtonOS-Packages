@@ -1,0 +1,9 @@
+Package: deflxcfg
+Version: 0.4
+Section: web
+Priority: Optional
+Architecture: all
+Maintainer: armadefuego@gmail.com
+Essential: no
+Depends: lxsession, lxpanel, openbox
+Description: Default configuration, and downloader for CommonDE lxde configuration

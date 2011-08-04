@@ -1,0 +1,29 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          lxcfg-start
+# Required-Start:    dbus
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: obtains lxcfg
+# Description:       obtains lxcfg
+### END INIT INFO
+
+PKGHOME=/tmp
+CFGURL="http://www.commonde.org/load/themes/lxde-cfg.tgz"
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	log_daemon_msg "Starting $0"
+	wget --timeout=5 -q $CFGURL -O $PKGHOME/lxde-cfg.tgz &
+	usermod -a -G netdev webc
+	log_end_msg 0
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
+	exit 3
+	;;
+esac
+
