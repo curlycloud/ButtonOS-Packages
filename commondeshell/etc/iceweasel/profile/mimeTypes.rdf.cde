@@ -20,7 +20,7 @@
   <RDF:Description RDF:about="urn:mimetype:application/commondep"
                    NC:value="application/commondep"
                    NC:editable="false"
-                   NC:fileExtensions="cdph"
+                   NC:fileExtensions="cdpl"
                    NC:description="">
     <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commondep"/>
   </RDF:Description>
@@ -29,7 +29,7 @@
                    NC:path="/usr/bin/cdsh" />
   <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commondep"
                    NC:prettyName="cdpl"
-                   NC:path="/usr/bin/cdpl" />
+                   NC:path="/usr/lib/commonde/cdpl" />
   <RDF:Description RDF:about="urn:mimetype:handler:application/x-sdlc"
                    NC:alwaysAsk="true"
                    NC:useSystemDefault="true"
@@ -44,7 +44,7 @@
   <RDF:Description RDF:about="urn:mimetype:handler:application/commondep"
                    NC:alwaysAsk="false">
     <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commondep"/>
-    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/bin/cdpl"/>
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/commonde/cdpl"/>
   </RDF:Description>
     <RDF:li RDF:resource="urn:mimetype:application/commonde"/>
     <RDF:li RDF:resource="urn:mimetype:application/commondep"/>
