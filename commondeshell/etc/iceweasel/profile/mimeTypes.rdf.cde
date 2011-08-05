@@ -6,10 +6,12 @@
 
   <Description about="urn:mimetypes"> 
     <NC:MIME-types> 
-      <Seq about="urn:mimetypes:root"> 
-      </Seq> 
     </NC:MIME-types> 
   </Description> 
+      <Seq about="urn:mimetypes:root"> 
+    <RDF:li RDF:resource="urn:mimetype:application/commonde"/>
+    <RDF:li RDF:resource="urn:mimetype:application/commondep"/>
+      </Seq> 
   <RDF:Description RDF:about="urn:mimetype:application/commonde"
                    NC:value="application/commonde"
                    NC:editable="true"
@@ -29,7 +31,7 @@
                    NC:path="/usr/bin/cdsh" />
   <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commondep"
                    NC:prettyName="cdpl"
-                   NC:path="/usr/bin/cdpl" />
+                   NC:path="/usr/lib/commonde/runcommonde" />
   <RDF:Description RDF:about="urn:mimetype:handler:application/x-sdlc"
                    NC:alwaysAsk="true"
                    NC:useSystemDefault="true"
@@ -44,9 +46,7 @@
   <RDF:Description RDF:about="urn:mimetype:handler:application/commondep"
                    NC:alwaysAsk="false">
     <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commondep"/>
-    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/bin/cdpl"/>
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/commonde/runcommonde"/>
   </RDF:Description>
-    <RDF:li RDF:resource="urn:mimetype:application/commonde"/>
-    <RDF:li RDF:resource="urn:mimetype:application/commondep"/>
 
 </RDF>
