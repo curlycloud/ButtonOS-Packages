@@ -31,7 +31,11 @@
                    NC:path="/usr/bin/cdsh" />
   <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commondep"
                    NC:prettyName="cdpl"
+<<<<<<< HEAD
+                   NC:path="/usr/lib/commonde/cdpl" />
+=======
                    NC:path="/usr/lib/commonde/runcommonde" />
+>>>>>>> 5b1634fce0e1e02e824975ab30bdb5cf000aa495
   <RDF:Description RDF:about="urn:mimetype:handler:application/x-sdlc"
                    NC:alwaysAsk="true"
                    NC:useSystemDefault="true"
@@ -46,7 +50,11 @@
   <RDF:Description RDF:about="urn:mimetype:handler:application/commondep"
                    NC:alwaysAsk="false">
     <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commondep"/>
+<<<<<<< HEAD
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/commonde/cdpl"/>
+=======
     <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/commonde/runcommonde"/>
+>>>>>>> 5b1634fce0e1e02e824975ab30bdb5cf000aa495
   </RDF:Description>
 
 </RDF>
