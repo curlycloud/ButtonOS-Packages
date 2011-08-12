@@ -1,9 +1,9 @@
 Package: commonde-shell
-Version: 0.6
+Version: 0.7
 Section: web
 Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: webconverger-base
+Depends: 
 Description: An application to allow signed scripts to be run form the web.

@@ -1,5 +1,4 @@
 #!/bin/sh
-exec > /tmp/jjg 2>&1
 VF=/live/image/.disk/info
 DB=cookies.sqlite
 V=`awk ' { print $NF } ' < $VF`
@@ -25,4 +24,5 @@ sqlite3 $DB <<EOF
 INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 1, 'version', '$V', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
 INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
 EOF
-
+#and make available to curl also
+echo "cookie = \"id=$U;version=$V\"" > $HOME/.curlrc

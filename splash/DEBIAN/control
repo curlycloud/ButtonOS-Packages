@@ -1,9 +1,9 @@
 Package: commonde-splash
-Version: 0.3
+Version: 0.4
 Section: web
 Priority: Optional
 Architecture: all
-Maintainer: armadefuego@gmail.com
+Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: webconverger-base
+Depends: 
 Description: The background for the progress bar. Also the background for the X server

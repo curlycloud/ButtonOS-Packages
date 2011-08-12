@@ -1,9 +1,9 @@
 Package: cde-lxconfig
-Version: 0.2
+Version: 0.3
 Section: web
 Priority: Optional
 Architecture: all
-Maintainer: armadefuego@gmail.com
+Maintainer: gunnjo@curlycloud.com
 Essential: no
 Replaces: openbox, lxmenu-data, lxde-common
 Depends: lxpanel, openbox, lxsession, lxde-common
