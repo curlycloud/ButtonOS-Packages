@@ -5,5 +5,5 @@ Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: 
+Depends: iceweasel
 Description: An application to allow signed scripts to be run form the web.

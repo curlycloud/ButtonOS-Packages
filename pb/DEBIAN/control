@@ -5,5 +5,5 @@ Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: 
+Depends: webconverger-base
 Description: Set up the webc user on login

@@ -5,5 +5,5 @@ Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: 
+Depends: libpam-runtime
 Description: pam manipulations
