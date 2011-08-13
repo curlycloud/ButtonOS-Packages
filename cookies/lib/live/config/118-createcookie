@@ -25,10 +25,8 @@ INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSe
 INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
 EOF
 #and make available to curl also
-if [ -e  $HOME/.profile ]
+if [ ! -e /home/${LIVE_USERNAME}/.curlrc ]
 then
-VDIR=$HOME
-else
-VDIR=/etc/skel
-fi
+VDIR=/home/${LIVE_USERNAME}
 echo "cookie = \"id=$U;version=$V\"" > $VDIR/.curlrc
+fi
