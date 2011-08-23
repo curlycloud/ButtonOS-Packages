@@ -1,0 +1,13 @@
+cde-lxconfig			
+commonde.list			Packages for building (live-build)
+commondeshell			Setup of iceweasel for commonde shell (cdsh)
+CommonDe.Splash.Final.png	initial image to generate splash/background
+cookies				Build the cookies for this machine
+deflxcfg			Configuration for lxcfg when no network
+pam_u				Configuration for pam user control
+pb				The scripts for the unix user
+README				This file!
+release				Text name of release ( major #)
+sconsole			
+splash				Initial splash screen
+xbackground			The background for X
