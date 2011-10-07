@@ -1,9 +1,9 @@
 Package: commonde-pam-u
-Version: 0.4
+Version: 0.5
 Section: pam
 Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: libpam-runtime
+Depends: libpam-runtime, commonde-base
 Description: pam manipulations

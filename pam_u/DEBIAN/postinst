@@ -9,7 +9,7 @@ chmod 440 /usr/lib/commonde/*
 chmod 4550 /usr/lib/commonde/runcommonde
 chmod 550 /usr/lib/commonde/cdpl
 #
-usermod -a -G commondep webc
-usermod -a -G sudo webc
-usermod -a -G netdev webc
+usermod -a -G commondep commonde
+usermod -a -G sudo commonde
+usermod -a -G netdev commonde
 
