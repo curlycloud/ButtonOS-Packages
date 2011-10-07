@@ -1,9 +1,9 @@
 Package: commonde-pb
-Version: 0.5
+Version: 0.6
 Section: web
 Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: webconverger-base
-Description: Set up the webc user on login
+Depends: commonde-base
+Description: Set up the user on login
