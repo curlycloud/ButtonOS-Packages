@@ -18,7 +18,6 @@ case "$1" in
   start)
 	log_daemon_msg "Starting $0"
 	wget --timeout=5 -q $CFGURL -O $PKGHOME/lxde-cfg.tgz &
-	usermod -a -G netdev webc
 	log_end_msg 0
 	;;
   *)
