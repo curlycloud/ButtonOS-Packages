@@ -1,5 +1,5 @@
 Package: cde-offldiag
-Version: 0.1
+Version: 0.2
 Section: diagnostics
 Priority: Optional
 Architecture: all
