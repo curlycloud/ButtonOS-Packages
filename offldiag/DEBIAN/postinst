@@ -1,0 +1,3 @@
+#!/bin/sh
+sed 's;^#kb::kbrequest.*;kb::kbrequest:/usr/lib/commonde/dodump;' /etc/inittab
+

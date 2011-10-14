@@ -1,0 +1,10 @@
+Package: cde-offldiag
+Version: 0.1
+Section: diagnostics
+Priority: Optional
+Architecture: all
+Maintainer: gunnjo@curlycloud.com
+Essential: no
+Depends: dconf
+Description: Create a new dconf log and ship it
+

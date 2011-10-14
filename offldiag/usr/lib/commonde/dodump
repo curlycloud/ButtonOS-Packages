@@ -1,0 +1,11 @@
+#!/bin/sh
+media=/media/CommonDe\ Diags/
+postit=http://www.commonde.org/diags/helpme
+set -- `dconf -v | grep "^Building"`
+file=$3
+while :
+do
+curl -F "upfile=@$file" $postit && exit 0
+[ -e "$media" ] && cp $file "$media" && exit 0
+sleep 10
+done
