@@ -1,15 +1,15 @@
 #!/bin/sh
 #create a new group that can run these commands
-groupadd buttonosp
+groupadd buttonuserg
 groupadd netdev
 #
-chown root:buttonosp /usr/lib/buttonos/*
+chown root:buttonuserg /usr/lib/buttonos/*
 chmod 440 /usr/lib/buttonos/*
 #
 chmod 4550 /usr/lib/buttonos/runbuttonos
 chmod 550 /usr/lib/buttonos/cdpl
 #
-usermod -a -G buttonosp buttonos
-usermod -a -G sudo buttonos
-usermod -a -G netdev buttonos
+usermod -a -G buttonuserg buttonuser
+usermod -a -G sudo buttonuser
+usermod -a -G netdev buttonuser
 

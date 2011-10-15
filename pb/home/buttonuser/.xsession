@@ -2,8 +2,8 @@
 # pb = persistent browser
 # Keep the browser running and clean between sessions in ~buttonos
 # hendry@webconverger.com
-#modified for ButtonOS gunnjo@buttonos.org
-MYHOME=/home/buttonos
+#modified for ButtonOS gunnjo@curlycloud.com
+MYHOME=/home/buttonuser
 
 # Stop (ab)users breaking the loop to restart the exited browser
 trap "echo Unbreakable!" SIGINT SIGTERM
