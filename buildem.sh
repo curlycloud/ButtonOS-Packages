@@ -1,8 +1,8 @@
 #!/bin/sh
-rm -f commonde-*.deb
+rm -f buttonos-*.deb
 rm -f deflxcfg*.deb
-rm -f cde-lxconfig*.deb
-rm -f cde-offldiag*.deb
+rm -f bos-lxconfig*.deb
+rm -f bos-offldiag*.deb
 for x in *
 do
  [ -d $x ] && fakeroot dpkg-deb --build $x

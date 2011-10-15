@@ -1,9 +1,9 @@
-Package: commonde-xbackground
+Package: buttonos-xbackground
 Version: 0.4
 Section: web
 Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: commonde-splash
-Description: Setup to allow the X background to be set from the commonde-splash
+Depends: buttonos-splash
+Description: Setup to allow the X background to be set from the buttonos-splash

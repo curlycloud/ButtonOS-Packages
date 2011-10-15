@@ -1,16 +1,16 @@
 #!/bin/bash
 ### BEGIN INIT INFO
-# Provides:	commonde
+# Provides:	buttonos
 # Required-Start:	$local_fs $remote_fs
 # Required-Stop:	$remote_fs
 # Default-Start:	2 3 4 5
 # Default-Stop:		0 1 6
-# Short-Description:	Setup for the Commonde project
+# Short-Description:	Setup for the ButtonOS project
 ### END INIT INFO
 
 # Author: Joseph J. Gunn <gunnjo@curlycloud.com>
-NAME="commonde"
-DESC="Commonde project setup"
+NAME="buttonos"
+DESC="ButtonOS project setup"
 SCRIPTNAME=/etc/init.d/$NAME
 
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME

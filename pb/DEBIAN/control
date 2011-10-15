@@ -1,9 +1,9 @@
-Package: commonde-pb
+Package: buttonos-pb
 Version: 0.6
 Section: web
 Priority: Optional
 Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
-Depends: commonde-base
+Depends: buttonos-base
 Description: Set up the user on login

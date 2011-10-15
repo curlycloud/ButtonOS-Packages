@@ -1,6 +1,6 @@
-commondebase			Base dependencies
+buttonosbase			Base dependencies
 cde-lxconfig			Remote configuration of LXDE
-commondeshell			Setup of iceweasel for commonde shell (cdsh)
+buttonosshell			Setup of iceweasel for buttonos shell (cdsh)
 cookies				Build the cookies for this machine
 deflxcfg			Configuration for lxcfg when no network
 pam_u				Configuration for pam user control

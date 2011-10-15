@@ -14,7 +14,7 @@ f=$1
 # make sure the file is there... to begin
 [ ! -f $f ] && exit 0
 d=`dirname $f`
-[ $d != '/usr/lib/commonde' ] && exit 0
+[ $d != '/usr/lib/buttonos' ] && exit 0
 #
 #Verify the file is valid... and run it
 /usr/bin/gpg --keyserver $KEYSRV  --keyserver-options auto-key-retrieve  --no-tty - < $f | /usr/bin/perl -t 

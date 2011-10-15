@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if ! id -u buttonuser > /dev/null 2>&1
+then
+	adduser --gecos GECOS buttonuser
+	adduser buttonuser audio
+	adduser buttonuser video
+	addgroup netdev
+	adduser buttonuser netdev
+
+fi
+

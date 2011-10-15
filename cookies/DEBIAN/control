@@ -1,4 +1,4 @@
-Package: commonde-cookie
+Package: buttonos-cookie
 Version: 0.4
 Section: web
 Priority: Optional
@@ -6,4 +6,4 @@ Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
 Depends: sqlite3,uuid,iceweasel
-Description: A package to add the creation of commonde cookies to the startup scripts
+Description: A package to add the creation of buttonos cookies to the startup scripts

@@ -10,7 +10,7 @@
 ### END INIT INFO
 
 PKGHOME=/tmp
-CFGURL="http://www.commonde.org/load/themes/lxde-cfg.tgz"
+CFGURL="http://www.buttonos.org/load/themes/lxde-cfg.tgz"
 
 . /lib/lsb/init-functions
 

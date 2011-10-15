@@ -9,44 +9,44 @@
     </NC:MIME-types> 
   </Description> 
       <Seq about="urn:mimetypes:root"> 
-    <RDF:li RDF:resource="urn:mimetype:application/commonde"/>
-    <RDF:li RDF:resource="urn:mimetype:application/commondep"/>
+    <RDF:li RDF:resource="urn:mimetype:application/buttonosp"/>
+    <RDF:li RDF:resource="urn:mimetype:application/buttonosp"/>
       </Seq> 
-  <RDF:Description RDF:about="urn:mimetype:application/commonde"
-                   NC:value="application/commonde"
+  <RDF:Description RDF:about="urn:mimetype:application/buttonos"
+                   NC:value="application/buttonos"
                    NC:editable="true"
                    NC:fileExtensions="cdsh"
                    NC:description="">
-    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commonde"/>
+    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/buttonos"/>
   </RDF:Description>
-  <RDF:Description RDF:about="urn:mimetype:application/commondep"
-                   NC:value="application/commondep"
+  <RDF:Description RDF:about="urn:mimetype:application/buttonosp"
+                   NC:value="application/buttonosp"
                    NC:editable="false"
                    NC:fileExtensions="cdpl"
                    NC:description="">
-    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/commondep"/>
+    <NC:handlerProp RDF:resource="urn:mimetype:handler:application/buttonosp"/>
   </RDF:Description>
-  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commonde"
+  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/buttonos"
                    NC:prettyName="cdsh"
                    NC:path="/usr/bin/cdsh" />
-  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/commondep"
+  <RDF:Description RDF:about="urn:mimetype:externalApplication:application/buttonosp"
                    NC:prettyName="cdpl"
-                   NC:path="/usr/lib/commonde/runcommonde" />
+                   NC:path="/usr/lib/buttonos/runbuttonos" />
   <RDF:Description RDF:about="urn:mimetype:handler:application/x-sdlc"
                    NC:alwaysAsk="true"
                    NC:useSystemDefault="true"
                    NC:saveToDisk="false">
     <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/x-sdlc"/>
   </RDF:Description>
-  <RDF:Description RDF:about="urn:mimetype:handler:application/commonde"
+  <RDF:Description RDF:about="urn:mimetype:handler:application/buttonos"
                    NC:alwaysAsk="false">
-    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commonde"/>
+    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/buttonos"/>
     <NC:possibleApplication RDF:resource="urn:handler:local:/usr/bin/cdsh"/>
   </RDF:Description>
-  <RDF:Description RDF:about="urn:mimetype:handler:application/commondep"
+  <RDF:Description RDF:about="urn:mimetype:handler:application/buttonosp"
                    NC:alwaysAsk="false">
-    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/commondep"/>
-    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/commonde/runcommonde"/>
+    <NC:externalApplication RDF:resource="urn:mimetype:externalApplication:application/buttonosp"/>
+    <NC:possibleApplication RDF:resource="urn:handler:local:/usr/lib/buttonos/runbuttonos"/>
   </RDF:Description>
 
 </RDF>

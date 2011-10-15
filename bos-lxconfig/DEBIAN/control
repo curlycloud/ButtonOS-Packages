@@ -1,4 +1,4 @@
-Package: cde-lxconfig
+Package: bos-lxconfig
 Version: 0.3
 Section: web
 Priority: Optional

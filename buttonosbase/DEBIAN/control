@@ -1,4 +1,4 @@
-Package: commonde-base
+Package: buttonos-base
 Version: 0.1
 Section: web
 Priority: Optional
@@ -6,4 +6,4 @@ Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
 Depends: mingetty, iceweasel
-Description: Base for commonde
+Description: Base for ButtonOS

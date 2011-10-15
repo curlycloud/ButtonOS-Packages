@@ -1,6 +1,6 @@
 #!/bin/sh
-media=/media/CommonDe\ Diags/
-postit=http://www.commonde.org/diags/helpme
+media=/media/ButtonOS\ Diags/
+postit=http://www.buttonos.org/diags/helpme
 set -- `dconf -v | grep "^Building"`
 file=$3
 while :

@@ -1,6 +1,6 @@
 #!/bin/sh
 cp /etc/inittab /etc/inittab.orig
-sed 's;^1:2345:.*;1:2345:respawn:/sbin/mingetty --autologin commonde tty1 linux;' < /etc/inittab.orig > /etc/inittab
+sed 's;^1:2345:.*;1:2345:respawn:/sbin/mingetty --autologin buttonuser tty1 linux;' < /etc/inittab.orig > /etc/inittab
 cat <<EOF >>/etc/iceweasel/pref/iceweasel.js
 pref("extensions.update.enabled", false);
 pref("intl.locale.matchOS", true);
@@ -9,5 +9,5 @@ lockpref("xpinstall.enabled", false);
 EOF
 
 cat <<EOF >>/etc/iceweasel/profile/prefs.js
-user_pref("browser.startup.homepage", "http://www.commonde.org/start");
+user_pref("browser.startup.homepage", "http://www.buttonos.org/start");
 EOF

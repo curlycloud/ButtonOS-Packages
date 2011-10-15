@@ -21,8 +21,8 @@ EOF
 fi
 #yum, yum. new cookies!
 sqlite3 $DB <<EOF
-INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 1, 'version', '$V', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
-INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.commonde.org', '/', 1415148799, 1415148799000, 0,0);
+INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 1, 'version', '$V', '.buttonos.org', '/', 1415148799, 1415148799000, 0,0);
+INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.buttonos.org', '/', 1415148799, 1415148799000, 0,0);
 EOF
 #and make available to curl also
 if [ ! -e /home/${LIVE_USERNAME}/.curlrc ]

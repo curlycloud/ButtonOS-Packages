@@ -6,4 +6,4 @@ Architecture: all
 Maintainer: gunnjo@curlycloud.com
 Essential: no
 Depends: lxsession, lxpanel, openbox
-Description: Default configuration, and downloader for CommonDE lxde configuration
+Description: Default configuration, and downloader for ButtonOS lxde configuration

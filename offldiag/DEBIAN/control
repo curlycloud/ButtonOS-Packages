@@ -1,4 +1,4 @@
-Package: cde-offldiag
+Package: bos-offldiag
 Version: 0.3
 Section: diagnostics
 Priority: Optional

@@ -1,18 +1,18 @@
 #!/bin/sh
 # pb = persistent browser
-# Keep the browser running and clean between sessions in ~commonde
+# Keep the browser running and clean between sessions in ~buttonos
 # hendry@webconverger.com
-#modified for CommonDe gunnjo@commonde.org
-MYHOME=/home/commonde
+#modified for ButtonOS gunnjo@buttonos.org
+MYHOME=/home/buttonos
 
 # Stop (ab)users breaking the loop to restart the exited browser
 trap "echo Unbreakable!" SIGINT SIGTERM
 
 # Set default homepage if homepage cmdline isn't set
-test $1 || set -- "http://www.commonde.org/start"
+test $1 || set -- "http://www.buttonos.org/start"
 
 grep -qs noxbg /proc/cmdline || {
-cp /etc/commonde/commonde.png $MYHOME/bg.png
+cp /etc/buttonos/buttonos.png $MYHOME/bg.png
 ( wget --timeout=5 -q $1/bg.png -O $MYHOME/bg.tmp ; file $MYHOME/bg.tmp | grep -qs PNG\ image && mv $MYHOME/bg.tmp $MYHOME/bg.png ) &
 }
 # disable bell

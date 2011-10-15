@@ -1,15 +1,15 @@
 #!/bin/sh
 #create a new group that can run these commands
-groupadd commondep
+groupadd buttonosp
 groupadd netdev
 #
-chown root:commondep /usr/lib/commonde/*
-chmod 440 /usr/lib/commonde/*
+chown root:buttonosp /usr/lib/buttonos/*
+chmod 440 /usr/lib/buttonos/*
 #
-chmod 4550 /usr/lib/commonde/runcommonde
-chmod 550 /usr/lib/commonde/cdpl
+chmod 4550 /usr/lib/buttonos/runbuttonos
+chmod 550 /usr/lib/buttonos/cdpl
 #
-usermod -a -G commondep commonde
-usermod -a -G sudo commonde
-usermod -a -G netdev commonde
+usermod -a -G buttonosp buttonos
+usermod -a -G sudo buttonos
+usermod -a -G netdev buttonos
 
