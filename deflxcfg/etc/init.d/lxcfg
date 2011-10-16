@@ -22,7 +22,7 @@ case "$1" in
 	do
 		sleep 1
 		count=`expr $count - 1`
-		[ $count == 0 ] && break
+		[ $count -lt 0 ] && break
 	done
 	cd / && tar -xzf $PKG
 	log_end_msg $?
