@@ -25,29 +25,10 @@ wm=/usr/bin/dwm.default
 [ -x /usr/bin/lxsession ] && wm=/usr/bin/lxsession
 $wm &
 
-# hide the cursor by default, showcursor to override
-grep -qs showcursor /proc/cmdline || /usr/bin/unclutter &
-
-for x in $(cat /proc/cmdline); do
-	case $x in
-		homepage=*)
-		set -f -- $(/bin/busybox httpd -d ${x#homepage=})
-		;;
-		kioskresetstation=*) # For killing the browser after a number of minutes of idleness
-		/usr/bin/kioskresetstation ${x#kioskresetstation=} &
-		;;
-	esac
-done
-
-grep -qs compose /proc/cmdline && setxkbmap -option "compose:rwin" && logger "Compose key setup"
-
 # if no-x-background is unset, try setup a background from homepage ($1)
 grep -qs noxbg /proc/cmdline || {
 xloadimage -quiet -onroot -center $MYHOME/bg.png -border "#444444"
 }
-
-# No screen blanking (warning: might limit the life span of your screen & world)
-grep -qs noblank /proc/cmdline && xset s off && xset -dpms && logger noblank
 
 while true
 do
