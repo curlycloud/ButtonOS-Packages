@@ -1,7 +1,7 @@
 #! /bin/sh
 ### BEGIN INIT INFO
 # Provides:          lxcfg-start
-# Required-Start:    dbus
+# Required-Start:    $syslog
 # Required-Stop:     
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
@@ -11,13 +11,15 @@
 
 PKGHOME=/tmp
 CFGURL="http://www.buttonos.org/load/themes/lxde-cfg.tgz"
+INSTFILE=/usr/share/lxde/defcfg.tgz
 
 . /lib/lsb/init-functions
 
 case "$1" in
   start)
 	log_daemon_msg "Starting $0"
-	wget --timeout=5 -q $CFGURL -O $PKGHOME/lxde-cfg.tgz &
+	(wget --timeout=10 -q $CFGURL -O $PKGHOME/lxde-cfg.tgz || 
+		cp $INSTFILE $PKGHOME/lxde-cfg.tgz ) &
 	log_end_msg 0
 	;;
   *)
