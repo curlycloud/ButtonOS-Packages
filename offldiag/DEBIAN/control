@@ -1,5 +1,5 @@
 Package: bos-offldiag
-Version: 0.3
+Version: 0.4
 Section: diagnostics
 Priority: Optional
 Architecture: all
