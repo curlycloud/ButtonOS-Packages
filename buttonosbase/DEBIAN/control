@@ -1,5 +1,5 @@
 Package: buttonos-base
-Version: 0.2
+Version: 0.3
 Section: web
 Priority: Optional
 Architecture: all

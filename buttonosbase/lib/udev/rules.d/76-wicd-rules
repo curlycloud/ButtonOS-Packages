@@ -1,0 +1,5 @@
+ACTION!="add", GOTO "wicd_end"
+SUBSYSTEM!="net", GOTO "wicd_end"
+
+RUN+="/usr/lib/buttonos/wicdnetif %k"
+LABEL="wicd_end"
