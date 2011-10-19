@@ -13,13 +13,14 @@ test $1 || set -- "http://www.buttonos.org/start"
 
 grep -qs noxbg /proc/cmdline || {
 cp /etc/buttonos/buttonos.png $MYHOME/bg.png
-( wget --timeout=5 -q $1/bg.png -O $MYHOME/bg.tmp ; file $MYHOME/bg.tmp | grep -qs PNG\ image && mv $MYHOME/bg.tmp $MYHOME/bg.png ) &
+( wget --timeout=5 -q $1/bg.png -O $MYHOME/bg.tmp ; file $MYHOME/bg.tmp | grep -qs PNG\ image && mv $MYHOME/bg.tmp $MYHOME/bg.png &&
+xloadimage -quiet -onroot -center $MYHOME/bg.png -border "#333000" ) &
 }
 # disable bell
 xset b 0 0
 
 # set background
-xsetroot -solid "#444444"
+xsetroot -solid "#333000"
 
 wm=/usr/bin/dwm.default
 [ -x /usr/bin/lxsession ] && wm=/usr/bin/lxsession
