@@ -10,6 +10,7 @@
 ### END INIT INFO
 
 PKGHOME=/tmp
+PKGFILE=$PKGHOME/lxde-cfg.tgz
 CFGURL="http://www.buttonos.org/load/themes/lxde-cfg.tgz"
 INSTFILE=/usr/share/lxde/defcfg.tgz
 
@@ -18,8 +19,8 @@ INSTFILE=/usr/share/lxde/defcfg.tgz
 case "$1" in
   start)
 	log_daemon_msg "Starting $0"
-	(wget --timeout=10 -q $CFGURL -O $PKGHOME/lxde-cfg.tgz || 
-		cp $INSTFILE $PKGHOME/lxde-cfg.tgz ) &
+	(cd /tmp ; wget --timeout=10 -q $CFGURL -O $PKGFILE.tmp &&
+		ln -s $PKGFILE.tmp $PKGFILE ) &
 	log_end_msg 0
 	;;
   *)

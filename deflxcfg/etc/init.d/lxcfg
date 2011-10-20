@@ -11,6 +11,8 @@
 
 PKGHOME=/tmp
 PKG=$PKGHOME/lxde-cfg.tgz
+INSTFILE=/usr/share/lxde/defcfg.tgz
+PKGFILE=$INSTFILE
 
 . /lib/lsb/init-functions
 
@@ -18,13 +20,14 @@ case "$1" in
   start)
 	log_daemon_msg "Starting $0"
 	count=10
-	while [ -f $PKG ] 
+	while [ ! -f $PKG ] 
 	do
 		sleep 1
 		count=`expr $count - 1`
 		[ $count -lt 0 ] && break
 	done
-	cd / && tar -xzf $PKG
+	[ -f $PKG ] && PKGFILE=$PKG
+	cd / && tar -xzf $PKGFILE
 	log_end_msg $?
 	;;
   *)
