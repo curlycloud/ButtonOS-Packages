@@ -1,5 +1,6 @@
 ACTION!="add", GOTO "wicd_end"
 SUBSYSTEM!="net", GOTO "wicd_end"
+KERNEL!="eth*|ath*|wlan*[0-9]", GOTO="wicd_end"
 
 RUN+="/usr/lib/buttonos/wicdnetif %k"
 LABEL="wicd_end"
