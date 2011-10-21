@@ -1,0 +1,27 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:	buttonos
+# Required-Start:	$local_fs $remote_fs wicd
+# Required-Stop:	$remote_fs
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	Setup for the wicd network cards
+### END INIT INFO
+
+# Author: Joseph J. Gunn <gunnjo@curlycloud.com>
+NAME="buttonos"
+DESC="ButtonOS wicd daemon setup"
+SCRIPTNAME=/etc/init.d/$NAME
+
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+. /lib/init/vars.sh
+. /lib/lsb/init-functions
+case "$1" in
+	start)
+		/usr/lib/buttonos/addwicdif
+	
+	;;
+	stop)
+	;;
+esac

@@ -1,0 +1,14 @@
+#!/usr/bin/python
+import os
+import re
+import syslog
+from subprocess import check_call, CalledProcessError
+
+list=os.listdir('/sys/class/net')
+for name in list:
+	if re.match('eth[\d]|wlan[\d]|ath[\d]', name):
+		print 'Name: ',name
+		try:
+			check_call(["/usr/lib/buttonos//wicdnetif", name]);
+		except CalledProcessError, e:
+			syslog.syslog("error Setting iface "+name);
