@@ -23,6 +23,10 @@ case "$1" in
 		ln -s $PKGFILE.tmp $PKGFILE ) &
 	log_end_msg 0
 	;;
+  stop)
+	log_daemon_msg "Stopping $0"
+	log_end_msg $?
+	;;
   *)
 	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
 	exit 3

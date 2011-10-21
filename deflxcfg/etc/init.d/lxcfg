@@ -30,6 +30,10 @@ case "$1" in
 	cd / && tar -xzf $PKGFILE
 	log_end_msg $?
 	;;
+  stop)
+	log_daemon_msg "Stopping $0"
+	log_end_msg $?
+	;;
   *)
 	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload|status}" >&2
 	exit 3
