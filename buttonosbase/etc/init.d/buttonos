@@ -19,12 +19,16 @@ SCRIPTNAME=/etc/init.d/$NAME
 . /lib/lsb/init-functions
 case "$1" in
 	start)
-	if grep -qs debug /proc/cmdline
-	then
-		#set user password
-	fi
-	
-	;;
+		log_daemon_msg "Starting $0"
+		if grep -qs debug /proc/cmdline
+		then
+			#set user password
+		fi
+		log_end_msg $?
+		
+		;;
 	stop)
+		log_daemon_msg "Stopping $0"
+		log_end_msg $?
 	;;
 esac

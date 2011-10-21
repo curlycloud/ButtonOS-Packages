@@ -1,6 +1,6 @@
 #!/bin/bash
 ### BEGIN INIT INFO
-# Provides:	buttonos
+# Provides:	wicd-autonet
 # Required-Start:	$local_fs $remote_fs wicd
 # Required-Stop:	$remote_fs
 # Default-Start:	2 3 4 5
@@ -9,7 +9,7 @@
 ### END INIT INFO
 
 # Author: Joseph J. Gunn <gunnjo@curlycloud.com>
-NAME="buttonos"
+NAME="wicd-autonet
 DESC="ButtonOS wicd daemon setup"
 SCRIPTNAME=/etc/init.d/$NAME
 
@@ -19,9 +19,13 @@ SCRIPTNAME=/etc/init.d/$NAME
 . /lib/lsb/init-functions
 case "$1" in
 	start)
+		log_daemon_msg "Starting $0"
 		/usr/lib/buttonos/addwicdif
+		log_end_msg $?
 	
 	;;
 	stop)
+		log_daemon_msg "Stopping $0"
+		log_end_msg $?
 	;;
 esac
