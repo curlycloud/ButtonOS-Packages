@@ -28,7 +28,7 @@ $wm &
 
 # if no-x-background is unset, try setup a background from homepage ($1)
 grep -qs noxbg /proc/cmdline || {
-xloadimage -quiet -onroot -center $MYHOME/bg.png -border "#444444"
+xloadimage -quiet -onroot -center $MYHOME/bg.png -border "#333000"
 }
 
 while true
