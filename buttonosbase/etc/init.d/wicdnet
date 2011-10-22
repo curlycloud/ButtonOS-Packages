@@ -1,6 +1,6 @@
 #!/bin/bash
 ### BEGIN INIT INFO
-# Provides:	wicd-autonet
+# Provides:		wicd-autonet
 # Required-Start:	$local_fs $remote_fs wicd
 # Required-Stop:	$remote_fs
 # Default-Start:	2 3 4 5
@@ -9,7 +9,7 @@
 ### END INIT INFO
 
 # Author: Joseph J. Gunn <gunnjo@curlycloud.com>
-NAME="wicd-autonet
+NAME="wicd-autonet"
 DESC="ButtonOS wicd daemon setup"
 SCRIPTNAME=/etc/init.d/$NAME
 
