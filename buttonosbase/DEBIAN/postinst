@@ -1,6 +1,7 @@
 #!/bin/sh
-cp /etc/inittab /etc/inittab.orig
-sed 's;^1:2345:.*;1:2345:respawn:/sbin/mingetty --autologin buttonuser tty1 linux;' < /etc/inittab.orig > /etc/inittab
+sed -i 's;^1:2345:.*;1:2345:respawn:/sbin/mingetty --autologin buttonuser tty1 linux;s;^[2-6]:23:.*;#&;' /etc/inittab
+insserv buttonos
+insserv wicdnet
 cat <<EOF >>/etc/iceweasel/pref/iceweasel.js
 pref("extensions.update.enabled", false);
 pref("intl.locale.matchOS", true);
