@@ -7,8 +7,5 @@ then
 	adduser --gecos GECOS buttonuser
 	adduser buttonuser audio
 	adduser buttonuser video
-	addgroup netdev
-	adduser buttonuser netdev
-
 fi
 
