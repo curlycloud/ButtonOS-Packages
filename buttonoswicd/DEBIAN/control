@@ -1,0 +1,9 @@
+Package: buttonos-wicd
+Version: 0.1
+Section: network
+Priority: Optional
+Architecture: all
+Maintainer: gunnjo@curlycloud.com
+Essential: no
+Depends: buttonos-base
+Description: Wicd connection tools for ButtonOS
