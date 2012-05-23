@@ -19,7 +19,7 @@ INSTFILE=/usr/share/lxde/defcfg.tgz
 case "$1" in
   start)
 	log_daemon_msg "Starting $0"
-	(cd /tmp ; wget --timeout=10 -q $CFGURL -O $PKGFILE.tmp &&
+	(cd /tmp ; curl -m 10 -s $CFGURL -K ${LIVE_USERNAME}/.curlrc -O $PKGFILE.tmp &&
 		ln -s $PKGFILE.tmp $PKGFILE ) &
 	log_end_msg 0
 	;;
