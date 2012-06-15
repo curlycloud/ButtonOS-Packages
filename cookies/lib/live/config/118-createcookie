@@ -16,13 +16,13 @@ if [ ! -e $DB ]
 then
 touch $DB
 sqlite3 $DB <<EOF
-CREATE TABLE moz_cookies (id INTEGER PRIMARY KEY, name TEXT, value TEXT, host TEXT, path TEXT,expiry INTEGER, lastAccessed INTEGER, isSecure INTEGER, isHttpOnly INTEGER);
+CREATE TABLE moz_cookies (id INTEGER PRIMARY KEY, baseDomain TEXT, name TEXT, value TEXT, host TEXT, path TEXT, expiry INTEGER, lastAccessed INTEGER, creationTime INTEGER, isSecure INTEGER, isHttpOnly INTEGER, CONSTRAINT moz_uniqueid UNIQUE (name, host, path));
 EOF
 fi
 #yum, yum. new cookies!
 sqlite3 $DB <<EOF
-INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 1, 'version', '$V', '.buttonos.org', '/', 1415148799, 1415148799000, 0,0);
-INSERT INTO moz_cookies (id, name, value, host, path, expiry, lastAccessed, isSecure, IsHttpOnly) VALUES ( 2, 'id', '$U', '.buttonos.org', '/', 1415148799, 1415148799000, 0,0);
+INSERT INTO moz_cookies (id, baseDomain, name, value, host, path, expiry, lastAccessed, creationTime, isSecure, IsHttpOnly) VALUES ( 1, 'buttonos.org', 'version', '$V', '.buttonos.org', '/', 1415148799, 1337843725798983, 1415148799000, 0,0);
+INSERT INTO moz_cookies (id, baseDomain, name, value, host, path, expiry, lastAccessed, creationTime, isSecure, IsHttpOnly) VALUES ( 2, 'buttonos.org', 'id', '$U', '.buttonos.org', '/', 1415148799, 1337843725798983, 1415148799000, 0,0);
 EOF
 #and make available to curl also
 if [ ! -e /home/${LIVE_USERNAME}/.curlrc ]
